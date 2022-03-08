@@ -15,9 +15,9 @@
 docker exec php__1 bash -ce "cd /data/site_projects/php__1/site_projects/site4/ ; git pull origin master"
 
 # 의존성 설치
-docker exec python__2 bash -ce "cd /data/site_projects/php__1/site_projects/site4/ ; composer install"
+docker exec php__1 bash -ce "cd /data/site_projects/php__1/site_projects/site4/ ; composer install"
 
 # 마이그레이트
-docker exec python__2 bash -ce "cd /data/site_projects/php__1/site_projects/site4/ ; ./artisan migrate"
+docker exec php__1 bash -ce "cd /data/site_projects/php__1/site_projects/site4/ ; ./artisan migrate"
 
 exit 0
