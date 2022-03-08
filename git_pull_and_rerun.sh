@@ -6,7 +6,7 @@
 {
   docker exec php__1 bash -ce "cd /data/site_projects/php__1/site_projects/site4_test/ ; git pull origin master"
   docker exec php__1 bash -ce "cd /data/site_projects/php__1/site_projects/site4_test/ ; composer install"
-  docker exec php__1 bash -ce "cd /data/site_projects/php__1/site_projects/site4_test/ ; ./artisan test"
+  docker exec php__1 bash -ce "cd /data/site_projects/php__1/site_projects/site4_test/ ; php artisan test"
 } || {
   exit 1
 }
@@ -18,6 +18,6 @@ docker exec php__1 bash -ce "cd /data/site_projects/php__1/site_projects/site4/ 
 docker exec php__1 bash -ce "cd /data/site_projects/php__1/site_projects/site4/ ; composer install"
 
 # 마이그레이트
-docker exec php__1 bash -ce "cd /data/site_projects/php__1/site_projects/site4/ ; ./artisan migrate"
+docker exec php__1 bash -ce "cd /data/site_projects/php__1/site_projects/site4/ ; php artisan migrate"
 
 exit 0
